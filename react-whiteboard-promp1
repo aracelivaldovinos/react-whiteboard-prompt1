@@ -1,0 +1,35 @@
+no spaces 
+spaces => %20 
+input => string 
+output => string 
+
+Without Recursion
+
+const replace = (string) => {
+  const charArray = string.split("")
+  let newArray = []
+  charArray.forEach(function(char){
+    if (char === " "){
+      newArray.push("%20)
+    }else {
+      newArray.push(char)
+    }
+    
+  })
+  return newArray
+}
+
+With Recusion 
+
+const = replace = (string) => { "Hello my name is"
+  const wordArray = string.split(" ") "Hello", "my", "name", "is"
+  if (typeof string !== "string") { // Termination case
+    return "Enter a string"
+  }
+  if (wordArray.length === 0){
+    return ""
+  }
+  else if (wordArray.length >= 1){
+    return wordArray[0].concat("%20").concat(replace(wordArray.splice(wordArray[0]).join(" ")))
+  }                                       
+}
